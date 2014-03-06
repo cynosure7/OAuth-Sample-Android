@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">OAuth2 Demo</string>
+    <string name="waiting_for_data">Waiting for data....</string>
+    <string name="launch_oauth_flow">Launch OAuth Flow</string>
+    <string name="clear_credentials">Clear Credentials</string>
+    <string name="oauth_cisco">Cisco WebEx Oauth2</string>
+    <string name="oauth">Oauth2</string>
+    <string name="help">Help</string>
+    <string name="api_call">API</string>
+    <string name="oauth_clientInfo">Client Info:</string>
+        <string name="oauth_clientID">ID: </string>
+        <string name="oauth_clientSecret">Secret: </string>
+    <string name="oauth_step1">Step1: Setup Scopes</string>
+    	<string name="oauth_scope_read">Read</string>
+        <string name="oauth_scope_write">Write</string>
+        <string name="oauth_scope_list">List</string>
+    <string name="oauth_step2">Step2: Get Authorization Code</string>
+        <string name="oauth_get_code">Get Authorization Code</string>
+        <string name="oauth_code">Authorization Code: </string>
+    <string name="oauth_step3">Step3: Get Access Toekn</string>
+    	<string name="oauth_get_token">Get Token By Authorization Code</string>
+        <string name="oauth_token">Access Token: </string>
+        <string name="oauth_refresh_token">Refresh Token: </string>
+        <string name="oauth_refresh">Optional: Refresh an Access Token</string>
+    <string name="oauth_step4">Step4: Call Resource Server API</string>
+        
+
+</resources>

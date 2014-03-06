@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+    
+	<!--Client Info  -->
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+		
+		<TextView 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/oauth_clientInfo"
+			android:textSize="18sp"
+			android:typeface="normal"/>
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/oauth_clientID"
+				android:typeface="normal"
+				android:textSize="10sp"/>	 
+			<TextView
+				android:id="@+id/txt_oauth_clientID"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="asdfasdf"
+				android:typeface="normal"
+				android:textSize="8sp"/>
+			</LinearLayout>
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/oauth_clientSecret"
+					android:typeface="normal"
+					android:textSize="10sp"/>	 
+				<TextView
+					android:id="@+id/txt_oauth_clientSecret"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="clientSecret"
+					android:typeface="normal"
+					android:textSize="8sp"/>	 
+			</LinearLayout>
+	</LinearLayout>
+	<!--Step1: Setup Scopes  -->
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+		
+		<TextView 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/oauth_step1"
+			android:textSize="18sp"
+			android:typeface="normal"/>
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+		
+			<CheckBox
+				android:id="@+id/checkbox_read"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/oauth_scope_read"
+				android:onClick="onCheckboxClicked"/>
+			<CheckBox
+				android:id="@+id/checkbox_write"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/oauth_scope_write"
+				android:onClick="onCheckboxClicked"/>
+			<CheckBox
+				android:id="@+id/checkbox_list"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/oauth_scope_list"
+				android:onClick="onCheckboxClicked"/>
+		</LinearLayout>
+		
+	</LinearLayout>
+	<!--Step2: Get Authorization Code  -->
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+		
+		<TextView 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/oauth_step2"
+			android:textSize="18sp"
+			android:typeface="normal"/>
+		
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+
+			<Button
+				android:id="@+id/btn_oauth_getCode"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/oauth_get_code"
+				style="@style/ButtonText"
+				android:background="@drawable/green"/>
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/oauth_code"
+					android:typeface="normal"/>	
+				<TextView
+					android:id="@+id/txt_oauth_code"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="authorization code"
+					android:typeface="normal"/>	 
+			</LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
+	
+	<!--Step3: Get Access Token  -->
+		<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+		
+		<TextView 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/oauth_step3"
+			android:textSize="18sp"
+			android:typeface="normal"/>
+		
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+
+			<Button
+				android:id="@+id/btn_oauth_getToken"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/oauth_get_token"
+				style="@style/ButtonText"
+				android:background="@drawable/green"/>
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/oauth_token"
+					android:typeface="normal"/>	
+				<TextView
+					android:id="@+id/txt_oauth_token"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="authorization code"
+					android:typeface="normal"/>	 
+			</LinearLayout>
+						<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/oauth_refresh_token"
+					android:typeface="normal"/>	
+				<TextView
+					android:id="@+id/txt_oauth_refresh_token"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="refresh code"
+					android:typeface="normal"/>	 
+			</LinearLayout>
+			<Button
+				android:id="@+id/btn_oauth_refresh"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/oauth_refresh"
+				style="@style/ButtonText"
+				android:background="@drawable/green"/>
+		</LinearLayout>
+	</LinearLayout>
+	
+	
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+	    	    
+		<Button
+			android:id="@+id/btn_oauth_cisco"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/oauth"
+			style="@style/ButtonText"
+			android:background="@drawable/green"/>
+	    
+	   	<Button
+			android:id="@+id/btn_api_cisco"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/api_call"
+			style="@style/ButtonText"
+			android:background="@drawable/green"/>
+	    
+		<Button
+			android:id="@+id/btn_clear_cisco"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/clear_credentials"
+			style="@style/ButtonText"
+			android:background="@drawable/green"/>
+	    
+	</LinearLayout>
+	 
+	<TextView
+		android:id="@+id/txt_oauth_cisco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+			    android:typeface="normal"/>	    
+	    
+</LinearLayout>
